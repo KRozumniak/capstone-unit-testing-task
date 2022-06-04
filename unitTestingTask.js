@@ -258,7 +258,6 @@
     var createFormatter = unitTestingTask.createFormatter = function (format) {
         return function (date) {
             var f = format[unitTestingTask.lang()] || format['default'] || format;
-            console.log(unitTestingTask(f, date));
             return unitTestingTask(f, date);
         };
     };

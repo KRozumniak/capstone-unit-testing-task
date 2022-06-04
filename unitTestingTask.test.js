@@ -81,19 +81,19 @@ describe("Unit Testing Task", () => {
     });
 
     it("'HH' returns correct zero-padded hour in 24-hr format", () => {
-      expect(getToken("HH", mockDate)).toBe("16");
+      expect(getToken("HH", mockDate)).toBe("20");
     });
 
     it("'H' returns correct hour in 24-hr format", () => {
-        expect(getToken("H", mockDate)).toBe(16);
+        expect(getToken("H", mockDate)).toBe(20);
       });
 
     it("'hh' returns correct zero-padded hour in 12-hr format", () => {
-      expect(getToken("hh", mockDate)).toBe("04");
+      expect(getToken("hh", mockDate)).toBe("08");
     });
 
     it("'h' returns correct hour in 12-hr format", () => {
-      expect(getToken("h", mockDate)).toBe(4);
+      expect(getToken("h", mockDate)).toBe(8);
     });
 
     it("'mm' returns correct zero-padded minutes", () => {
@@ -129,11 +129,11 @@ describe("Unit Testing Task", () => {
     });
 
     it("'ZZ' returns correct time-zone in ISO8601-compatible basic format", () => {
-      expect(getToken("ZZ", mockDate)).toBe("-0400");
+      expect(getToken("ZZ", mockDate)).toBe("+0000");
     });
 
     it("'Z' returns correct time-zone in ISO8601-compatible extended format", () => {
-      expect(getToken("Z", mockDate)).toBe("-04:00");
+      expect(getToken("Z", mockDate)).toBe("+00:00");
     });
   });
 
